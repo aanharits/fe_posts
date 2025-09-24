@@ -23,11 +23,7 @@ export default function RegisterForm() {
     const router = useRouter();
     const [error, setError] = useState("");
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm({
+    const {register, handleSubmit, formState: { errors }} = useForm({
         resolver: zodResolver(registerSchema),
     });
 

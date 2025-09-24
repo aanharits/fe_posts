@@ -67,9 +67,7 @@ export default function LoginForm() {
                             placeholder="your@email.com"
                             className="w-full px-3 py-2 text-sm border text-black border-gray-800 bg-gray-200 rounded-xl focus:outline-none focus:ring-2"
                         />
-                        {errors.email && (
-                            <p className="text-red-500 text-sm">{errors.email.message}</p>
-                        )}
+                        {errors.email && (<p className="text-red-500 text-sm">{errors.email.message}</p>)}
                     </div>
 
                     <div className="space-y-1.5">
@@ -83,11 +81,7 @@ export default function LoginForm() {
                             placeholder="Your password"
                             className="w-full px-3 py-2 text-sm border text-black border-gray-800 bg-gray-200 rounded-lg focus:ring-2"
                         />
-                        {errors.password && (
-                            <p className="text-red-500 text-sm">
-                                {errors.password.message}
-                            </p>
-                        )}
+                        {errors.password && (<p className="text-red-500 text-sm">{errors.password.message}</p>)}
                     </div>
 
                     <Button
