@@ -38,7 +38,7 @@ export default function LoginForm() {
             router.push("/dashboard");
         } catch (err) {
             setError(err.response?.data?.status || "Login failed");
-        }
+        } 
     };
 
     return (
@@ -52,9 +52,7 @@ export default function LoginForm() {
                 </CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-gray-800 text-sm md:text-base">
-                {error && (
-                    <p className="text-red-500 text-xs md:text-sm mb-2">{error}</p>
-                )}
+                {error && (<p className="text-red-500 text-xs md:text-sm mb-2">{error}</p>)}
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
                     <div className="space-y-1.5">
                         <Label htmlFor="email" className="text-xs md:text-sm">
