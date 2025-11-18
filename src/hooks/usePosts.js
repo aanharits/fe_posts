@@ -25,7 +25,6 @@ export function usePosts() {
             setPosts(data.reverse());
         } catch (error) {
             console.error("Error fetching posts:", error);
-            toast.error("Failed to load posts");
         } finally {
             setLoading(false);
         }
